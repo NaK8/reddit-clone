@@ -1,12 +1,14 @@
-import { Button } from "@nextui-org/react";
-import React from "react";
+import TopicCreateForm from "@/components/topics/topic-create-form";
 
 export default function home() {
   return (
-    <div className="p-4">
-      <Button color="primary" size="lg">
-        Click here
-      </Button>
+    <div className="grid grid-cols-4 gap-4 p-4">
+      <div className="col-span-3">
+        <h1 className="m-2 text-xl">Create Topic</h1>
+      </div>
+      <div>
+        <TopicCreateForm />
+      </div>
     </div>
   );
 }
