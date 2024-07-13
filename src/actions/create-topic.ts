@@ -29,11 +29,11 @@ export async function createTopic(
   formState: CreateTopicFormState,
   formData: FormData,
 ): Promise<CreateTopicFormState> {
-  // TODO: Revalidate the home page
   const result = createTopicSchema.safeParse({
     name: formData.get("name"),
     description: formData.get("description"),
   });
+
   if (!result.success) {
     return {
       errors: result.error.flatten().fieldErrors,
@@ -74,5 +74,5 @@ export async function createTopic(
   }
 
   revalidatePath("/");
-  redirect(paths.topicShowPath(topic.id));
+  redirect(paths.topicShowPath(topic.slug));
 }
