@@ -9,12 +9,14 @@ import PostShowLoading from "@/components/posts/post-show-loading";
 interface PostShowPageProps {
   params: {
     slug: string;
-    postId: string;
+    postid: string;
   };
 }
 
 export default async function PostShowPage({ params }: PostShowPageProps) {
-  const { slug, postId } = params;
+  const { slug, postid } = params;
+
+  const postId = postid;
 
   return (
     <div className="space-y-3">
