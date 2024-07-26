@@ -55,7 +55,7 @@ export async function createComment(
     if (err instanceof Error) {
       return {
         errors: {
-          _form: [err.message, "Some BullShit"],
+          _form: [err.message],
         },
       };
     } else {

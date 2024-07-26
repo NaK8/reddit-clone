@@ -15,7 +15,6 @@ interface PostShowPageProps {
 
 export default async function PostShowPage({ params }: PostShowPageProps) {
   const { slug, postId } = params;
-  console.log(params);
 
   return (
     <div className="space-y-3">
@@ -23,7 +22,7 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
         className="underline decoration-solid"
         href={paths.topicShowPath(slug)}
       >
-        {"< "}Back to {slug}
+        {"< "}Back to {slug} & {postId}
       </Link>
       <Suspense fallback={<PostShowLoading />}>
         <PostShow postId={postId} />
