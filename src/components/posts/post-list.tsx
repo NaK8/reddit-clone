@@ -19,7 +19,9 @@ export default async function PostList({ fetchData }: PostListProps) {
     return (
       <div key={post.id} className="rounded border p-2">
         <Link href={paths.postShowPath(topicSlug, post.id)}>
-          <h3 className="text-lg font-bold">{post.title}</h3>
+          <h3 className="text-large font-bold capitalize md:text-lg">
+            {post.title}
+          </h3>
           <div className="flex flex-row gap-8">
             <p className="text-xs text-gray-400">By {post.user.name}</p>
             <p className="text-xs text-gray-400">

@@ -10,7 +10,7 @@ export default function TopicShowPage({
 }) {
   console.log(params.slug);
   return (
-    <div className="grid grid-cols-4 gap-4 p-4">
+    <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-4">
       <div className="col-span-3">
         <h3 className="mb-2 text-3xl font-bold">{params.slug}</h3>
         <PostList fetchData={() => fetchPostByTopicSlug(params.slug)} />
