@@ -24,7 +24,7 @@ export default async function PostShowPage({ params }: PostShowPageProps) {
         className="underline decoration-solid"
         href={paths.topicShowPath(slug)}
       >
-        {"< "}Back to {slug} & {postId}
+        {"< "}Back to {slug}
       </Link>
       <Suspense fallback={<PostShowLoading />}>
         <PostShow postId={postId} />
